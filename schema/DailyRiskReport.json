@@ -1,5 +1,5 @@
 {
-    "$schema": "https://github.com/saivaai/webhook-integration/tree/dev/schema",
+    "$schema": "https://github.com/saivaai/saiva-api/tree/dev/schema",
     "$ref": "#/definitions/DailyRiskReport",
     "definitions": {
         "DailyRiskReport": {
