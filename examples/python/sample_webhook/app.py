@@ -42,5 +42,5 @@ def webhook():
     return 'Ok'
 
 if __name__ == '__main__':
-    print('Listening for log events on 7071')
+    print('Listening for events on ' + str(port))
     app.run(port=port)
