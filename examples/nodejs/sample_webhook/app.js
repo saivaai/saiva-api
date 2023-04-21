@@ -2,7 +2,9 @@ var express = require('express')
 const crypto = require('crypto');
 var app = express()
 
+// Set your runtime variables
 let secret = '<YOUR WEBHOOK SECRET KEY>';
+let port = 7071;
 
 // Signature verification
 const verifyHmac = (
@@ -52,4 +54,4 @@ app.post('/webhook', function (req, res) {
 })
 
 console.log(`Listening for log events on 7071`)
-app.listen(7071);
+app.listen(port);

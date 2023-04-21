@@ -3,7 +3,10 @@ from flask import request
 import hashlib, hmac, json
 
 app = Flask(__name__)
+
+# Set your runtime variables
 secret = '<YOUR WEBHOOK SECRET KEY>'
+port = 7071
 
 # Signature verification
 def verifyHmac(receivedHmacHeader, receivedBody, secret):
@@ -40,4 +43,4 @@ def webhook():
 
 if __name__ == '__main__':
     print('Listening for log events on 7071')
-    app.run(port=7071)
+    app.run(port=port)
