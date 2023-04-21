@@ -7,7 +7,9 @@ This is a simple node.js project that implements a webhook receiver.
 `npm install`
 
 1. Set your listen port to the desired value (currently 7071)
-2. Add your webhook secret to the code:
+`let port = 8080
+`
+2. Add your webhook secret to the code: 
 `let secret = '<YOUR WEBHOOK SECRET KEY>';
 `
 ## Run
