@@ -2,7 +2,7 @@ var express = require('express')
 const crypto = require('crypto');
 var app = express()
 
-let secret = 'hUPGDF4uQh1';
+let secret = '<YOUR WEBHOOK SECRET KEY>';
 
 // Signature verification
 const verifyHmac = (
