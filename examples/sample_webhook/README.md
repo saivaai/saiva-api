@@ -1,13 +1,17 @@
-## Webhook Sample
+# Webhook Sample
 
-This is a simple webhook receiver 
+## Overview
+This is a simple node.js project that implements a webhook receiver. 
 
 ## Install
-npm install
+`npm install`
+
 Add your webhook secret to the code:
 
 `let secret = '<YOUR WEBHOOK SECRET KEY>';
-
-
+`
 ## Run
-Run: node app.js
+`node app.js`
+
+## Get Help
+For help or feedback please contact support@saiva.ai
