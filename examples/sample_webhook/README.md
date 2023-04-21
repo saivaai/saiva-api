@@ -1,4 +1,4 @@
-# Webhook Sample
+# Webhook Sample (node.js)
 
 ## Overview
 This is a simple node.js project that implements a webhook receiver. 
