@@ -30,7 +30,7 @@ app.post('/webhook', function (req, res) {
         return res.sendStatus(500);
     }
     else {
-        console.log('Signature: ' + req.headers.signature,);
+        console.log('Signature: ' + req.headers.signature);
     }
 
     // Verify source from signature
