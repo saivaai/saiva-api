@@ -53,5 +53,5 @@ app.post('/webhook', function (req, res) {
     res.send('Ok')
 })
 
-console.log(`Listening for log events on 7071`)
+console.log(`Listening for events on ` + port)
 app.listen(port);
