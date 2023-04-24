@@ -9,10 +9,10 @@ secret = '<YOUR WEBHOOK SECRET KEY>'
 port = 7071
 
 # Signature verification
-def verifyHmac(receivedHmacHeader, receivedBody, secret):
-    hmacParts = receivedHmacHeader.split(' ')
+def verifyHmac(received_hmac_header, received_body, secret):
+    hmacParts = received_hmac_header.split(' ')
     receivedHmac = hmacParts[1]
-    hash = hmac.new(bytes(secret, 'UTF-8'), receivedBody, hashlib.sha256).hexdigest()
+    hash = hmac.new(bytes(secret, 'UTF-8'), received_body, hashlib.sha256).hexdigest()
     return receivedHmac == hash
 
 # Main webhook entry point
