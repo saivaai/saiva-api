@@ -7,11 +7,14 @@ This is a simple node.js project that implements a webhook receiver.
 `npm install`
 
 1. Set your listen port to the desired value (currently 7071)
-`let port = 8080
-`
+`let port = 8080`
+
 2. Add your webhook secret to the code: 
-`let secret = '<YOUR WEBHOOK SECRET KEY>';
-`
+`let secret = '<YOUR WEBHOOK SECRET KEY>';`
+
+## Run
+`node app.js`
+
 
 ## Description
 
@@ -28,9 +31,6 @@ Here's a breakdown of what the code does:
 - Finally, the server listens on the specified port and logs a message to indicate that it is ready to receive incoming requests. 
 
 Overall, this code provides a secure way to receive incoming requests and verify their authenticity using a HMAC signature. It can be used as a basis for building a webhook endpoint that receives and processes incoming requests.
-
-## Run
-`node app.js`
 
 ## Get Help
 For help or feedback please contact support@saiva.ai
