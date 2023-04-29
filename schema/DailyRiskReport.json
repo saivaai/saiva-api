@@ -12,6 +12,9 @@
                 "web_hook_name": {
                     "type": "string"
                 },
+                "type": {
+                  	"type": "string"
+                },
                 "report_type": {
                     "type": "string"
                 },
