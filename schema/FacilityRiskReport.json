@@ -21,6 +21,9 @@
                 "facility_id": {
                     "type": "integer"
                 },
+                "region" : {
+                  "type": [ "string", "null" ]
+                },
                 "report_date": {
                     "type": "string"
                 },
