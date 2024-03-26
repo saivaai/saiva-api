@@ -1,8 +1,8 @@
 {
     "$schema": "https://github.com/saivaai/saiva-api/tree/dev/schema",
-    "$ref": "#/definitions/DailyRiskReport",
+    "$ref": "#/definitions/CrossFacilityReport",
     "definitions": {
-        "DailyRiskReport": {
+        "CrossFacilityReport": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
