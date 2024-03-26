@@ -70,7 +70,7 @@
                     "type": "integer"
                 },
                 "rank_yesterday": {
-                    "type": "integer"
+                    "type": ["integer", "null"]
                 },
                 "rank_movement": {
                     "type": "integer"
@@ -95,11 +95,8 @@
                 "facility_name",
                 "region_name",
                 "mrn",
-                "unit",
                 "room",
-                "rank_today",
-                "rank_yesterday",
-                "rank_movement"
+                "rank_today"
             ],
             "title": "FacilityRiskReport"
         }
