@@ -58,7 +58,7 @@
                     "type": "string"
                 },
                 "patient_name": {
-                    "type": "dict",
+                    "type": "object",
                     "properties": {
                         "value": {"type": ["string", "null"]},
                         "detail_url": {"type": ["string", "null"]}
