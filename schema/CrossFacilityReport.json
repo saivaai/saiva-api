@@ -58,7 +58,11 @@
                     "type": "string"
                 },
                 "patient_name": {
-                    "type": "dict"
+                    "type": "dict",
+                    "properties": {
+                        "value": {"type": ["string", "null"]},
+                        "detail_url": {"type": ["string", "null"]}
+                    }
                 },
                 "unit": {
                     "type": [ "string", "null" ]
@@ -70,10 +74,10 @@
                     "type": "integer"
                 },
                 "rank_yesterday": {
-                    "type": ["integer", "null"]
+                    "type": [ "integer", "string" ]
                 },
                 "rank_movement": {
-                    "type": "integer"
+                    "type": [ "integer", "string" ]
                 },
                 "payer": {
                     "type": [ "string", "null" ]
