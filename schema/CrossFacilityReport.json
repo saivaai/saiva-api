@@ -57,13 +57,6 @@
                 "mrn": {
                     "type": "string"
                 },
-                "patient_name": {
-                    "type": "object",
-                    "properties": {
-                        "value": {"type": ["string", "null"]},
-                        "detail_url": {"type": ["string", "null"]}
-                    }
-                },
                 "unit": {
                     "type": [ "string", "null" ]
                 },
