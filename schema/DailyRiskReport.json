@@ -18,6 +18,9 @@
                 "report_type": {
                     "type": "string"
                 },
+                "qm_type": {
+                    "type": "string"
+                },
                 "report_date": {
                     "type": "string"
                 },
@@ -41,7 +44,8 @@
                 "report_date",
                 "report_type",
                 "version",
-                "web_hook_name"
+                "web_hook_name",
+                "qm_type"
             ]
         },
         "FacilityRiskReport": {
@@ -49,6 +53,9 @@
             "additionalProperties": false,
             "properties": {
                 "version": {
+                    "type": "string"
+                },
+                "report_type": {
                     "type": "string"
                 },
                 "qm_type": {
@@ -86,6 +93,7 @@
                 "client",
                 "facility_id",
                 "facility_name",
+                "report_type",
                 "qm_type",
                 "report_date",
                 "risk_list",
