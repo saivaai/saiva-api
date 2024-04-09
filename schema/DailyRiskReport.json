@@ -55,9 +55,6 @@
                 "version": {
                     "type": "string"
                 },
-                "report_type": {
-                    "type": "string"
-                },
                 "qm_type": {
                     "type": "string"
                 },
@@ -93,7 +90,6 @@
                 "client",
                 "facility_id",
                 "facility_name",
-                "report_type",
                 "qm_type",
                 "report_date",
                 "risk_list",
