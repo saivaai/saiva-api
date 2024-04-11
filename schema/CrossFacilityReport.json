@@ -1,8 +1,8 @@
 {
     "$schema": "https://github.com/saivaai/saiva-api/tree/dev/schema",
-    "$ref": "#/definitions/DailyRiskReport",
+    "$ref": "#/definitions/CrossFacilityReport",
     "definitions": {
-        "DailyRiskReport": {
+        "CrossFacilityReport": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -52,103 +52,54 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "version": {
-                    "type": "string"
-                },
-                "qm_type": {
-                    "type": "string"
-                },
-                "client": {
-                    "type": "string"
-                },
                 "facility_name": {
                     "type": "string"
                 },
-                "facility_id": {
-                    "type": "integer"
-                },
-                "region" : {
-                  "type": [ "string", "null" ]
-                },
-                "report_date": {
+                "region_name": {
                     "type": "string"
                 },
-                "risk_list_length": {
-                    "type": "integer"
+                "mrn": {
+                    "type": "string"
                 },
-                "report_download_url" : {
-                  "type": [ "string", "null" ]
+                "unit": {
+                    "type": [ "string", "null" ]
                 },
-                "risk_list": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/RiskList"
-                    }
-                }
-            },
-            "required": [
-                "client",
-                "facility_id",
-                "facility_name",
-                "qm_type",
-                "report_date",
-                "risk_list",
-                "risk_list_length",
-                "version"
-            ],
-            "title": "FacilityRiskReport"
-        },
-        "RiskList": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "patient_id": {
-                    "type": "integer"
-                },
-                "patient_mrn": {
+                "room": {
                     "type": "string"
                 },
                 "rank_today": {
                     "type": "integer"
                 },
                 "rank_yesterday": {
-                    "type": [ "integer", "null" ]
+                    "type": [ "integer", "string" ]
                 },
-                "days_ranked": {
-                    "type": "integer"
+                "rank_movement": {
+                    "type": [ "integer", "string" ]
                 },
                 "payer": {
                     "type": [ "string", "null" ]
                 },
-                "primary_physician": {
+                "physician": {
                     "type": [ "string", "null" ]
                 },
                 "initial_admission_date": {
-                    "type": "string"
+                    "type": [ "string", "null" ]
                 },
                 "last_transfer_date": {
                     "type": [ "string", "null" ]
                 },
-                "risk_rank_reasons": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                "visited": {
+                    "type": [ "string", "null" ]
                 }
             },
             "required": [
-                "days_ranked",
-                "initial_admission_date",
-                "last_transfer_date",
-                "patient_id",
-                "patient_mrn",
-                "payer",
-                "primary_physician",
-                "rank_today",
-                "rank_yesterday",
-                "risk_rank_reasons"
+                "facility_name",
+                "region_name",
+                "mrn",
+                "room",
+                "rank_today"
             ],
-            "title": "RiskList"
+            "title": "FacilityRiskReport"
         }
     }
 }
