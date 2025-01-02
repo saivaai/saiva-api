@@ -55,6 +55,9 @@
                 "facility_name": {
                     "type": "string"
                 },
+                "facility_id": {
+                    "type": "integer"
+                },
                 "region_name": {
                     "type": "string"
                 },
@@ -93,6 +96,7 @@
                 }
             },
             "required": [
+                "facility_id",
                 "facility_name",
                 "region_name",
                 "mrn",
