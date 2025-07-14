@@ -1,0 +1,253 @@
+{
+    "$schema": "https://github.com/saivaai/saiva-api/tree/dev/schema",
+    "$ref": "#/definitions/DailyRiskReportV2",
+    "definitions": {
+        "DailyRiskReport": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "string"
+                },
+                "web_hook_name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": [ "string", "null" ]
+                },
+                "report_type": {
+                    "type": "string"
+                },
+                "qm_type": {
+                    "type": "string"
+                },
+                "report_date": {
+                    "type": "string"
+                },
+                "client": {
+                    "type": "string"
+                },
+                "payload_length": {
+                    "type": "integer"
+                },
+                "payload": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/FacilityRiskReport"
+                    }
+                }
+            },
+            "required": [
+                "client",
+                "payload",
+                "payload_length",
+                "report_date",
+                "report_type",
+                "version",
+                "web_hook_name",
+                "qm_type"
+            ]
+        },
+        "FacilityRiskReport": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "string"
+                },
+                "qm_type": {
+                    "type": "string"
+                },
+                "client": {
+                    "type": "string"
+                },
+                "facility_name": {
+                    "type": "string"
+                },
+                "facility_id": {
+                    "type": "integer"
+                },
+                "region" : {
+                  "type": [ "string", "null" ]
+                },
+                "report_date": {
+                    "type": "string"
+                },
+                "risk_list_length": {
+                    "type": "integer"
+                },
+                "report_download_url" : {
+                  "type": [ "string", "null" ]
+                },
+                "risk_list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RiskList"
+                    }
+                },
+                "charts_download_url" : {
+                  "type": [ "string", "null" ]
+                }
+            },
+            "required": [
+                "client",
+                "facility_id",
+                "facility_name",
+                "qm_type",
+                "report_date",
+                "risk_list",
+                "risk_list_length",
+                "version"
+            ],
+            "title": "FacilityRiskReport"
+        },
+        "RiskList": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "patient_id": {
+                    "type": "integer"
+                },
+                "patient_mrn": {
+                    "type": "string"
+                },
+                "rank_today": {
+                    "type": "integer"
+                },
+                "rank_yesterday": {
+                    "type": [ "integer", "null" ]
+                },
+                "days_ranked": {
+                    "type": "integer"
+                },
+                "payer": {
+                    "type": [ "string", "null" ]
+                },
+                "primary_physician": {
+                    "type": [ "string", "null" ]
+                },
+                "initial_admission_date": {
+                    "type": "string"
+                },
+                "last_transfer_date": {
+                    "type": [ "string", "null" ]
+                },
+                "hospitalization_risk_score": {
+                    "type": [ "float", "null" ]
+                },
+                "ai_risk_rank_reason_insights": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AIRiskRankReasonInsight"
+                    }
+                },
+                "caoi_chart_data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CAOIChartData"
+                    }
+                },
+                "expert_rules": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "days_ranked",
+                "initial_admission_date",
+                "last_transfer_date",
+                "patient_id",
+                "patient_mrn",
+                "payer",
+                "primary_physician",
+                "rank_today",
+                "rank_yesterday",
+                "hospitalization_risk_score",
+                "ai_risk_rank_reason_insights",
+                "caoi_chart_data",
+                "expert_rules"
+            ],
+            "title": "RiskList"
+        },
+        "AIRiskRankReasonInsight": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AiRiskRankReasonInsightItem"
+                    }
+                }
+            },
+            "required": [
+                "category",
+                "items"
+            ],
+            "title": "AIRiskRankReasonInsight"
+        },
+        "AiRiskRankReasonInsightItem": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "subcategory": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "subcategory",
+                "text"
+            ],
+            "title": "AiRiskRankReasonInsightItem"
+        },
+        "CAOIChartData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "alerts": {
+                    "type": "float"
+                },
+                "diagnoses": {
+                    "type": "float"
+                },
+                "lab_results": {
+                    "type": "float"
+                },
+                "meds": {
+                    "type": "float"
+                },
+                "orders": {
+                    "type": "float"
+                },
+                "risks": {
+                    "type": "float"
+                },
+                "vitals": {
+                    "type": "float"
+                }
+            },
+            "required": [
+                "category",
+                "alerts",
+                "diagnoses",
+                "lab_results",
+                "meds",
+                "orders",
+                "risks",
+                "vitals"
+            ],
+            "title": "CAOIChartData"
+        }
+    }
+}
