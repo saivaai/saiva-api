@@ -2,7 +2,7 @@
     "$schema": "https://github.com/saivaai/saiva-api/tree/dev/schema",
     "$ref": "#/definitions/DailyRiskReportV2",
     "definitions": {
-        "DailyRiskReport": {
+        "DailyRiskReportV2": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
