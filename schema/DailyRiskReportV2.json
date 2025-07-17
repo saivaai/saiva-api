@@ -133,7 +133,7 @@
                     "type": [ "string", "null" ]
                 },
                 "hospitalization_risk_score": {
-                    "type": [ "float", "null" ]
+                    "type": [ "number", "null" ]
                 },
                 "ai_risk_rank_reason_insights": {
                     "type": "array",
@@ -216,25 +216,25 @@
                     "type": "string"
                 },
                 "alerts": {
-                    "type": "float"
+                    "type": "number"
                 },
                 "diagnoses": {
-                    "type": "float"
+                    "type": "number"
                 },
                 "lab_results": {
-                    "type": "float"
+                    "type": "number"
                 },
                 "meds": {
-                    "type": "float"
+                    "type": "number"
                 },
                 "orders": {
-                    "type": "float"
+                    "type": "number"
                 },
                 "risks": {
-                    "type": "float"
+                    "type": "number"
                 },
                 "vitals": {
-                    "type": "float"
+                    "type": "number"
                 }
             },
             "required": [
