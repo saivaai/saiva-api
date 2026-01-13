@@ -147,7 +147,7 @@
                         "$ref": "#/definitions/CAOIChartData"
                     }
                 },
-                "expert_rules": {
+                "care_actions": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -167,7 +167,7 @@
                 "hospitalization_risk_score",
                 "ai_risk_rank_reason_insights",
                 "caoi_chart_data",
-                "expert_rules"
+                "care_actions"
             ],
             "title": "RiskList"
         },
