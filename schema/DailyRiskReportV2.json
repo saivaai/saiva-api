@@ -216,36 +216,29 @@
                     "type": "string"
                 },
                 "alerts": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "diagnoses": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "lab_results": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "meds": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "orders": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "risks": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 },
                 "vitals": {
-                    "type": "number"
+                    "type": ["number", "null"]
                 }
             },
             "required": [
-                "category",
-                "alerts",
-                "diagnoses",
-                "lab_results",
-                "meds",
-                "orders",
-                "risks",
-                "vitals"
+                "category"
             ],
             "title": "CAOIChartData"
         }
